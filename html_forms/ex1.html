@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HTML Forms - Exercise 1</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			table {
+				border: 1px solid #999;
+				border-spacing: 0;
+			}
+			td {
+				border: 1px solid #999;
+			}
+			.text-right {
+				width: 150px;
+				text-align: right;
+				font-weight: bold;
+			}
+			#table-footer {
+				background-color: lightblue;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="post" action="#">
+			<table>
+				<tr>
+					<td class="text-right"><label for="ln">Last Name</label></td>
+					<td colspan="3"><input type="text" id="ln" placeholder="Nakov" size="45" /></td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="fn">First Name</label></td>
+					<td colspan="3"><input type="text" id="fn" placeholder="Svetlin" size="45" /></td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="adr">Address</label></td>
+					<td id="width_300" colspan="3"><textarea id="adr" placeholder="17 Hristo Botev Str. floor 3. apt. 12" rows="5" cols="35"></textarea></td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="city">City</label></td>
+					<td><input type="text" id="city" placeholder="Kaspichan" size="25" /></td>
+					<td><label for="state"><strong>State</strong></label></td>
+					<td><input type="text" id="state" size="5" /></td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="zip">Zip/Postal Code</label></td>
+					<td colspan="3"><input type="text" id="zip" placeholder="9325" size="10" /></td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="country">Country</label></td>
+					<td colspan="3">
+						<select id="country">
+							<option value="Bulgaria" selected="selected">Bulgaria</option>
+							<option value="UK">UK</option>
+							<option value="US">US</option>
+							<option value="Russia">Russia</option>
+							<option value="Spain">Spain</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="phone">Phone(country code,<br>area code, number)</label></td>
+					<td colspan="3">
+						(+<input type="tel" id="phone" placeholder="359" size="5" />
+						)<input type="tel" placeholder="88" size="5" />
+						-<input type="tel" placeholder="8334343" size="15" />
+					</td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="email">E-mail</label></td>
+					<td colspan="3"><input type="email" id="email" pattern="[^ @]*@[^ @].[^ @]" placeholder="nakov@kaspichan.org" size="45" /></td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="bd">Birth date</label></td>
+					<td colspan="3">
+						Month<input type="text" placeholder="06" id="bd" size="1" />
+						Day<input type="text" id="day" placeholder="14" size="1" />
+						Year(4 digit)<input type="text" id="year" placeholder="1980" size="5" />
+					</td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="gender">Gender</label></td>
+					<td colspan="3">
+						<select id="gender">
+							<option value="Male" selected="selected">Male</option>
+							<option value="Female">Female</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="radio1">Starting date</label></td>
+					<td colspan="3">
+						<input type="radio" name="start" id="radio1" checked="checked" />
+						<label for="radio1">Spring 2006</label>
+						<input type="radio" name="start" id="radio2" />
+						<label for="radio2">Summer 2006</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-right"><label for="info">Comments/Questions</label></td>
+					<td colspan="3"><textarea id="info" placeholder="Please send me more information about the lodging" rows="5" cols="33"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="4" id="table-footer">
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Clear This Form" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
